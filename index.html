@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Software Open Source para Nube Empresarial">
+    <title>Enterprise Cloud Open Source Stack</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <main class="container">
+        <header class="hero">
+            <h1 class="hero-title">Enterprise <span class="text-gradient">Open Cloud</span></h1>
+            <p class="hero-subtitle">Tu guía definitiva de herramientas Open Source para construir infraestructura a escala empresarial.</p>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="compute">Computación</button>
+                <button class="filter-btn" data-filter="storage">Almacenamiento</button>
+                <button class="filter-btn" data-filter="network">Redes</button>
+                <button class="filter-btn" data-filter="orchestration">Orquestación</button>
+                <button class="filter-btn" data-filter="observability">Observabilidad</button>
+            </div>
+        </header>
+
+        <section id="catalog-grid" class="catalog-grid">
+            <!-- Cards will be injected here by app.js -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Construido para escalar. Solo Open Source.</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="./app.js"></script>
+</body>
+</html>

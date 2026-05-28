@@ -1,0 +1,200 @@
+const cloudSoftware = [
+    {
+        id: 'openstack',
+        name: 'OpenStack',
+        category: 'compute',
+        categoryLabel: 'IaaS / Virtualización',
+        description: 'La plataforma líder mundial de computación en la nube de código abierto. Controla grandes pools de procesamiento, almacenamiento y redes en todo el centro de datos.',
+        tags: ['IaaS', 'Enterprise', 'Escalable'],
+        url: 'https://www.openstack.org/',
+        icon: '☁️'
+    },
+    {
+        id: 'proxmox',
+        name: 'Proxmox VE',
+        category: 'compute',
+        categoryLabel: 'Virtualización',
+        description: 'Plataforma completa de gestión de virtualización empresarial de código abierto. Integra hipervisor KVM y contenedores LXC, almacenamiento y red definidos por software.',
+        tags: ['KVM', 'LXC', 'HCI'],
+        url: 'https://www.proxmox.com/',
+        icon: '🖥️'
+    },
+    {
+        id: 'kubernetes',
+        name: 'Kubernetes',
+        category: 'orchestration',
+        categoryLabel: 'Orquestación',
+        description: 'El estándar de la industria para la orquestación de contenedores. Automatiza el despliegue, escalado y gestión de aplicaciones en contenedores.',
+        tags: ['Contenedores', 'Cloud Native', 'Escalado'],
+        url: 'https://kubernetes.io/',
+        icon: '☸️'
+    },
+    {
+        id: 'okd',
+        name: 'OKD (OpenShift)',
+        category: 'orchestration',
+        categoryLabel: 'PaaS / Orquestación',
+        description: 'La distribución comunitaria de Kubernetes que impulsa Red Hat OpenShift. Optimizado para desarrollo continuo y despliegue multi-tenant.',
+        tags: ['Kubernetes', 'PaaS', 'DevOps'],
+        url: 'https://www.okd.io/',
+        icon: '🚀'
+    },
+    {
+        id: 'ceph',
+        name: 'Ceph',
+        category: 'storage',
+        categoryLabel: 'Almacenamiento Distribuido',
+        description: 'Sistema de almacenamiento distribuido altamente escalable. Proporciona interfaces de objetos, bloques y archivos en un único clúster unificado.',
+        tags: ['Object Storage', 'Block Storage', 'Escalable'],
+        url: 'https://ceph.io/',
+        icon: '📦'
+    },
+    {
+        id: 'minio',
+        name: 'MinIO',
+        category: 'storage',
+        categoryLabel: 'Almacenamiento de Objetos',
+        description: 'Almacenamiento de objetos distribuido de alto rendimiento, compatible con la API de Amazon S3. Construido para cargas de trabajo de IA y Big Data.',
+        tags: ['S3 Compatible', 'Performance', 'Cloud Native'],
+        url: 'https://min.io/',
+        icon: '🪣'
+    },
+    {
+        id: 'truenas',
+        name: 'TrueNAS SCALE',
+        category: 'storage',
+        categoryLabel: 'HCI / Almacenamiento',
+        description: 'Plataforma de infraestructura hiperconvergente de código abierto basada en Debian Linux y contenedores, con ZFS en su núcleo.',
+        tags: ['ZFS', 'NAS', 'HCI'],
+        url: 'https://www.truenas.com/truenas-scale/',
+        icon: '💾'
+    },
+    {
+        id: 'pfsense',
+        name: 'pfSense / OPNsense',
+        category: 'network',
+        categoryLabel: 'Redes y Seguridad',
+        description: 'Sistemas operativos de firewall y enrutamiento basados en FreeBSD de código abierto con una amplia variedad de funciones empresariales.',
+        tags: ['Firewall', 'VPN', 'Routing'],
+        url: 'https://opnsense.org/',
+        icon: '🛡️'
+    },
+    {
+        id: 'cilium',
+        name: 'Cilium',
+        category: 'network',
+        categoryLabel: 'Redes Cloud Native',
+        description: 'Software de código abierto para proporcionar, asegurar y observar la conectividad de red entre cargas de trabajo de contenedores usando eBPF.',
+        tags: ['eBPF', 'Kubernetes', 'Seguridad'],
+        url: 'https://cilium.io/',
+        icon: '🐝'
+    },
+    {
+        id: 'prometheus',
+        name: 'Prometheus & Grafana',
+        category: 'observability',
+        categoryLabel: 'Monitorización',
+        description: 'El ecosistema estándar para monitorización de métricas en la nube y alertas, combinado con la mejor plataforma de visualización de datos.',
+        tags: ['Métricas', 'Alertas', 'Dashboards'],
+        url: 'https://prometheus.io/',
+        icon: '📊'
+    },
+    {
+        id: 'opentofu',
+        name: 'OpenTofu',
+        category: 'orchestration',
+        categoryLabel: 'Infraestructura como Código',
+        description: 'Herramienta de IaC de código abierto (fork de Terraform) para definir y aprovisionar la infraestructura del centro de datos usando un lenguaje de configuración.',
+        tags: ['IaC', 'Terraform', 'Automatización'],
+        url: 'https://opentofu.org/',
+        icon: '🏗️'
+    },
+    {
+        id: 'ansible',
+        name: 'Ansible',
+        category: 'orchestration',
+        categoryLabel: 'Automatización',
+        description: 'Sistema de automatización de TI radicalmente simple que maneja gestión de configuración, despliegue de aplicaciones y aprovisionamiento en la nube.',
+        tags: ['Config Management', 'Agentless', 'DevOps'],
+        url: 'https://www.ansible.com/community',
+        icon: '⚙️'
+    }
+];
+
+const catalogGrid = document.getElementById('catalog-grid');
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+// SVG Icon for links
+const linkIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+
+// Render Cards
+function renderCards(filter = 'all') {
+    catalogGrid.innerHTML = '';
+    
+    const filteredData = filter === 'all' 
+        ? cloudSoftware 
+        : cloudSoftware.filter(item => item.category === filter);
+        
+    if (filteredData.length === 0) {
+        catalogGrid.innerHTML = '<p style="text-align:center; grid-column: 1/-1; color: var(--text-secondary);">No se encontraron resultados para esta categoría.</p>';
+        return;
+    }
+
+    filteredData.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        
+        const tagsHtml = item.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        
+        card.innerHTML = `
+            <div class="card-header">
+                <div class="card-icon">${item.icon}</div>
+                <span class="card-category">${item.categoryLabel}</span>
+            </div>
+            <h2 class="card-title">${item.name}</h2>
+            <div class="card-tags">
+                ${tagsHtml}
+            </div>
+            <p class="card-description">${item.description}</p>
+            <div class="card-footer">
+                <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="card-link">
+                    Explorar ${linkIcon}
+                </a>
+            </div>
+        `;
+        
+        catalogGrid.appendChild(card);
+        
+        // Stagger animation
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 50);
+    });
+}
+
+// Initial render
+document.addEventListener('DOMContentLoaded', () => {
+    // Hide cards initially for animation
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .card { opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; }
+    `;
+    document.head.appendChild(style);
+    
+    renderCards();
+});
+
+// Filter logic
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked
+        btn.classList.add('active');
+        
+        // Filter and render
+        const filterValue = btn.getAttribute('data-filter');
+        renderCards(filterValue);
+    });
+});
