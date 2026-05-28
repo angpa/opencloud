@@ -13,6 +13,16 @@
   - Observabilidad
 - **Diseño Moderno:** Interfaz estética y responsiva usando HTML, CSS puro y JavaScript, destacando tipografías modernas y efectos visuales atractivos.
 
+## 🧰 Herramientas en el Catálogo
+
+El catálogo incluye actualmente las siguientes herramientas de código abierto organizadas por capa de infraestructura:
+
+- **Computación:** OpenStack, Proxmox VE
+- **Almacenamiento:** Ceph, MinIO, TrueNAS SCALE
+- **Redes:** pfSense / OPNsense, Cilium
+- **Orquestación e IaC:** Kubernetes, OKD (OpenShift), OpenTofu, Ansible
+- **Observabilidad:** Prometheus & Grafana
+
 ## 🛠 Tecnologías Utilizadas
 
 - **HTML5:** Estructura semántica.
