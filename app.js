@@ -25,7 +25,7 @@ const cloudSoftware = [
         category: 'orchestration',
         categoryLabel: 'Orquestación',
         description: 'El estándar de la industria para la orquestación de contenedores. Automatiza el despliegue, escalado y gestión de aplicaciones en contenedores.',
-        tags: ['Contenedores', 'Cloud Native', 'Escalado'],
+        tags: ['Contenedores', 'CNCF', 'Escalado'],
         url: 'https://kubernetes.io/',
         icon: '☸️'
     },
@@ -85,7 +85,7 @@ const cloudSoftware = [
         category: 'network',
         categoryLabel: 'Redes Cloud Native',
         description: 'Software de código abierto para proporcionar, asegurar y observar la conectividad de red entre cargas de trabajo de contenedores usando eBPF.',
-        tags: ['eBPF', 'Kubernetes', 'Seguridad'],
+        tags: ['eBPF', 'Kubernetes', 'CNCF'],
         url: 'https://cilium.io/',
         icon: '🐝'
     },
@@ -95,7 +95,7 @@ const cloudSoftware = [
         category: 'observability',
         categoryLabel: 'Monitorización',
         description: 'El ecosistema estándar para monitorización de métricas en la nube y alertas, combinado con la mejor plataforma de visualización de datos.',
-        tags: ['Métricas', 'Alertas', 'Dashboards'],
+        tags: ['Métricas', 'CNCF', 'Dashboards'],
         url: 'https://prometheus.io/',
         icon: '📊'
     },
@@ -168,6 +168,46 @@ const cloudSoftware = [
         tags: ['Email', 'Docker', 'SMTP'],
         url: 'https://mailcow.email/',
         icon: '📧'
+    },
+    {
+        id: 'argocd',
+        name: 'Argo CD',
+        category: 'cncf',
+        categoryLabel: 'Entrega Continua',
+        description: 'Herramienta declarativa de entrega continua GitOps para Kubernetes. Automatiza el despliegue de las aplicaciones en el estado deseado.',
+        tags: ['GitOps', 'CI/CD', 'CNCF'],
+        url: 'https://argoproj.github.io/cd/',
+        icon: '🐙'
+    },
+    {
+        id: 'envoy',
+        name: 'Envoy',
+        category: 'cncf',
+        categoryLabel: 'Proxy de Servicios',
+        description: 'Proxy de red perimetral y de servicios de alto rendimiento, diseñado para aplicaciones nativas de la nube y arquitecturas de microservicios.',
+        tags: ['Proxy', 'Service Mesh', 'CNCF'],
+        url: 'https://www.envoyproxy.io/',
+        icon: '🔌'
+    },
+    {
+        id: 'helm',
+        name: 'Helm',
+        category: 'cncf',
+        categoryLabel: 'Gestor de Paquetes',
+        description: 'El gestor de paquetes de Kubernetes que te ayuda a gestionar aplicaciones de Kubernetes usando "Charts" para definir, instalar y actualizar.',
+        tags: ['Paquetes', 'Kubernetes', 'CNCF'],
+        url: 'https://helm.sh/',
+        icon: '⎈'
+    },
+    {
+        id: 'harbor',
+        name: 'Harbor',
+        category: 'cncf',
+        categoryLabel: 'Registro de Contenedores',
+        description: 'Registro nativo de la nube de código abierto que asegura los artefactos con políticas y control de acceso basado en roles (RBAC).',
+        tags: ['Registro', 'Seguridad', 'CNCF'],
+        url: 'https://goharbor.io/',
+        icon: '🚢'
     }
 ];
 

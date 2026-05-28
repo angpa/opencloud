@@ -12,6 +12,7 @@
   - Orquestación
   - Observabilidad
   - Productividad
+  - Cloud Native (CNCF)
 - **Diseño Moderno:** Interfaz estética y responsiva usando HTML, CSS puro y JavaScript, destacando tipografías modernas y efectos visuales atractivos.
 
 ## 🧰 Herramientas en el Catálogo
@@ -24,6 +25,7 @@ El catálogo incluye actualmente las siguientes herramientas de código abierto 
 - **Orquestación e IaC:** Kubernetes, OKD (OpenShift), OpenTofu, Ansible
 - **Observabilidad:** Prometheus & Grafana
 - **Productividad:** Nextcloud, Collabora Online, Jitsi Meet, Mattermost, Mailcow
+- **Cloud Native (CNCF):** Argo CD, Envoy, Helm, Harbor *(Nota: Kubernetes, Prometheus y Cilium también son proyectos CNCF)*
 
 ## 🛠 Tecnologías Utilizadas
 
