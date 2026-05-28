@@ -118,6 +118,56 @@ const cloudSoftware = [
         tags: ['Config Management', 'Agentless', 'DevOps'],
         url: 'https://www.ansible.com/community',
         icon: '⚙️'
+    },
+    {
+        id: 'nextcloud',
+        name: 'Nextcloud',
+        category: 'productivity',
+        categoryLabel: 'Almacenamiento y Suite',
+        description: 'Plataforma de colaboración de contenido de código abierto. Ofrece almacenamiento de archivos, sincronización, y funciones integradas de comunicación.',
+        tags: ['Drive', 'SaaS', 'Colaboración'],
+        url: 'https://nextcloud.com/',
+        icon: '☁️'
+    },
+    {
+        id: 'collabora',
+        name: 'Collabora Online',
+        category: 'productivity',
+        categoryLabel: 'Ofimática',
+        description: 'Potente suite ofimática en línea basada en LibreOffice, que permite la edición colaborativa de documentos de texto, hojas de cálculo y presentaciones.',
+        tags: ['Docs', 'Sheets', 'Slides'],
+        url: 'https://www.collaboraoffice.com/',
+        icon: '📝'
+    },
+    {
+        id: 'jitsi',
+        name: 'Jitsi Meet',
+        category: 'productivity',
+        categoryLabel: 'Videoconferencia',
+        description: 'Solución de videoconferencia de código abierto 100% gratuita, segura, flexible y fácil de usar. Equivalente a Google Meet.',
+        tags: ['Videollamadas', 'WebRTC', 'Reuniones'],
+        url: 'https://jitsi.org/jitsi-meet/',
+        icon: '📹'
+    },
+    {
+        id: 'mattermost',
+        name: 'Mattermost',
+        category: 'productivity',
+        categoryLabel: 'Chat de Equipo',
+        description: 'Plataforma de colaboración y mensajería de código abierto altamente segura y escalable, alternativa a Slack, Microsoft Teams y Google Chat.',
+        tags: ['Chat', 'Mensajería', 'Colaboración'],
+        url: 'https://mattermost.com/',
+        icon: '💬'
+    },
+    {
+        id: 'mailcow',
+        name: 'Mailcow',
+        category: 'productivity',
+        categoryLabel: 'Servidor de Correo',
+        description: 'Suite de servidor de correo basada en Docker de código abierto, completa y fácil de usar. Proporciona una alternativa completa a Gmail corporativo.',
+        tags: ['Email', 'Docker', 'SMTP'],
+        url: 'https://mailcow.email/',
+        icon: '📧'
     }
 ];
 

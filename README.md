@@ -11,6 +11,7 @@
   - Redes
   - Orquestación
   - Observabilidad
+  - Productividad
 - **Diseño Moderno:** Interfaz estética y responsiva usando HTML, CSS puro y JavaScript, destacando tipografías modernas y efectos visuales atractivos.
 
 ## 🧰 Herramientas en el Catálogo
@@ -22,6 +23,7 @@ El catálogo incluye actualmente las siguientes herramientas de código abierto 
 - **Redes:** pfSense / OPNsense, Cilium
 - **Orquestación e IaC:** Kubernetes, OKD (OpenShift), OpenTofu, Ansible
 - **Observabilidad:** Prometheus & Grafana
+- **Productividad:** Nextcloud, Collabora Online, Jitsi Meet, Mattermost, Mailcow
 
 ## 🛠 Tecnologías Utilizadas
 
